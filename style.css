@@ -1,0 +1,104 @@
+body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    background: #2980b9;
+    background-image: linear-gradient(120deg, #12d8dd, #c000ff);
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+
+.center {
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.login {
+    background:white;
+    border: 1.4px solid silver;
+    border-radius: 12px;
+}
+
+.login h1 {
+    font-size: 32px;
+    border-bottom: 1px solid silver;
+    padding: 0 0 20px 0;
+    text-align: center;
+}
+
+.login form {
+    padding: 0 40px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+
+.login .txt {
+    position: relative;
+    margin: 30px 0;
+    border-bottom: 2px solid #adadad;
+}
+
+.txt input {
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    outline: none;
+    border: none;
+}
+
+.txt label {
+    transition: .5s;
+    position: absolute;
+    top: 50%;
+    color: #adadad;
+    transform: translate(4px, -50%);
+    font-size: 16px;
+    pointer-events: none;
+}
+
+.txt span::before {
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #2691d9;
+    transition: .4s;
+}
+
+.txt input:focus ~ label,
+.txt input:valid ~ label {
+    transition: .5s;
+    top: -5%;
+    color: #2691d9;
+} 
+
+.txt input:focus ~ span::before,
+.txt input:valid ~ span::before {
+    transition: .6s;
+    width: 100%;
+} 
+
+input[type="submit"] {
+    width: 100%;
+    height: 40px;
+    background: #2691d9;
+    outline: none;
+    border: 1.3px solid;
+    border-radius: 25px;
+    color: #e9f4fb;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .4s;
+}
+
+input[type="submit"]:hover {
+    border-color: #2691d9;
+    transition: .4s;
+}
